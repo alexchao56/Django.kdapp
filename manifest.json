@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "name": "django",
+  "identifier": "com.koding.alexchao56.apps.django",
+  "authorNick": "Chao",
+  "homepage": "alecxhao56.kd.io/apps/django.kdapp",
+  "author": "Alex Chao",
+  "repository": "git://github.com/alexchao56/django.kdapp.git",
+  "description": "django : django is  is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
+  "category": "web-app",
+  "source": {
+    "blocks": {
+      "app": {
+        "files": [
+          "./index.coffee"
+        ]
+      }
+    },
+    "stylesheets": [
+      "./style.css"
+    ]
+  },
+  "options": {
+    "type": "tab"
+  }
+}
