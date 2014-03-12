@@ -22,7 +22,7 @@ class LogWatcher extends FSWatcher
 domain     = "#{KD.nick()}.kd.io"
 OutPath    = "/tmp/_Djangoinstaller.out"
 kdbPath    = "~/.koding-Django"
-resource   = "https://alexchao56.kd.io/apps/Django.kdapp"
+resource   = "https://raw.github.com/alexchao56/Django.kdapp/master"
 
 class DjangoInstaller extends KDView
 
@@ -60,7 +60,7 @@ class DjangoInstaller extends KDView
         tagName       : 'img'
         cssClass      : 'logo'
         attributes    :
-          src         : "#{resource}/Django.jpg"
+          src         : "#{resource}/django.jpg"
 
       @watcher = new LogWatcher
 
@@ -233,3 +233,7 @@ class DjangoInstaller extends KDView
     vmc.run "pgrep -f '.koding-Django/Django.js' -l -u #{KD.nick()}", (err, res)->
       if err then callback false
       else callback res.split(' ').last
+
+# Helper for testing in Kodepad
+appView.addSubView new DjangoInstaller
+cssClass: ".Django-installer"
